@@ -1,0 +1,1 @@
+export const DEPARTMENT_OPTIONS: string[] = ["JavaScript", "Python", "C++"]

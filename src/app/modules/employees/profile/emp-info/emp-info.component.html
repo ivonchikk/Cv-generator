@@ -1,0 +1,53 @@
+<div class="employee-info">
+  <form [formGroup]="profileInfo" class="info-form-box">
+    <div class="input-box">
+      <app-cv-gen-input
+        formControlName="firstName"
+        type="text"
+        placeholder="First Name"
+        label="First Name"
+      ></app-cv-gen-input>
+
+      <app-cv-gen-input
+        formControlName="lastName"
+        type="text"
+        placeholder="Last Name"
+        label="Last Name"
+      ></app-cv-gen-input>
+
+      <app-cv-gen-input
+        formControlName="email"
+        type="email"
+        placeholder="Ex. pat@example.com"
+        label="Email"
+      ></app-cv-gen-input>
+    </div>
+
+    <div class="select-box">
+      <app-cv-gen-select
+        formControlName="specialization"
+        placeholder="Specialization"
+        label="Specialization"
+        [options]="specializationOptions"
+      ></app-cv-gen-select>
+
+      <app-cv-gen-select
+        formControlName="department"
+        placeholder="Department"
+        label="Department"
+        [options]="departmentOptions"
+      ></app-cv-gen-select>
+    </div>
+  </form>
+
+  <div class="button-group">
+    <app-cv-gen-button 
+    class="save-button" 
+    [buttonTypes]="buttonTypes.BlueButton"
+    (btnClick)="saveBtnEvent()"
+      >Save</app-cv-gen-button>
+
+    <app-cv-gen-button class="cancel-button" [buttonTypes]="buttonTypes.WhiteButton" (btnClick)="canselBtnEvent()"
+      >Cancel</app-cv-gen-button>
+  </div>
+</div>

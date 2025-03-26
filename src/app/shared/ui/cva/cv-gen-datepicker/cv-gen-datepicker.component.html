@@ -1,0 +1,22 @@
+<form class="cv-datepicker">
+  <mat-label>
+    <span [textContent]="label"></span>
+    <img class="star-span" src="/star.png" alt="*" />
+  </mat-label>
+  <mat-form-field appearance="outline">
+    <input
+      matInput
+      [matDatepicker]="picker"
+      [placeholder]="placeholder"
+      [formControl]="datepickerControl"
+    />
+    <mat-datepicker-toggle matIconSuffix [for]="picker">
+      <mat-icon matDatepickerToggleIcon>calendar_today</mat-icon>
+    </mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+
+    <mat-error *ngIf="datepickerControl.hasError('required')"
+    >Please, specify the field</mat-error
+  >
+  </mat-form-field>
+</form>

@@ -1,0 +1,60 @@
+<div class="cv-table">
+  <table mat-table [dataSource]="tableData" class="mat-elevation-z8">
+    <div *ngFor="let column of tableColumns">
+      <ng-container
+        *ngIf="
+          column.columnDef != 'action' &&
+          column.columnDef != 'startDate' &&
+          column.columnDef != 'endDate'
+        "
+        matColumnDef="{{ column.columnDef }}"
+      >
+        <th mat-header-cell *matHeaderCellDef>{{ column.header }}</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element[column.columnDef] }}
+        </td>
+      </ng-container>
+
+      <ng-container
+        *ngIf="column.columnDef === 'startDate'"
+        matColumnDef="{{ column.columnDef }}"
+      >
+        <th mat-header-cell *matHeaderCellDef>{{ column.header }}</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element[column.columnDef] | date }}
+        </td>
+      </ng-container>
+      <ng-container
+        *ngIf="column.columnDef === 'endDate'"
+        matColumnDef="{{ column.columnDef }}"
+      >
+        <th mat-header-cell *matHeaderCellDef>{{ column.header }}</th>
+        <td mat-cell *matCellDef="let element">
+          {{ element[column.columnDef] | date }}
+        </td>
+      </ng-container>
+
+      <ng-container *ngIf="column.columnDef === 'action'" matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Action</th>
+        <td mat-cell *matCellDef="let element">
+          <button
+            class="delete-btn"
+            mat-mini-fab
+            color="warn"
+            aria-label="Delete"
+            (click)="deleteBtn($event, element)"
+          >
+            <mat-icon svgIcon="delete"></mat-icon>
+          </button>
+        </td>
+      </ng-container>
+    </div>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr
+      mat-row
+      *matRowDef="let row; columns: displayedColumns"
+      [routerLink]="[row.id]"
+    ></tr>
+  </table>
+</div>

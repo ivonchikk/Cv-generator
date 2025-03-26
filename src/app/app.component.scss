@@ -1,0 +1,25 @@
+@import "../app/shared/stylings/utils";
+
+// * {
+//   font: normal 400 14px "Roboto", sans-serif;
+// }
+
+
+.container {
+  display: flex;
+  .breadcrumb-and-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  app-navigation {
+    z-index: 10;
+  }
+}
+
+.content {
+  padding: 24px 15px;
+  border: 20px solid rgb(241, 242, 244);
+  border-bottom: none;
+  flex: 2;
+}

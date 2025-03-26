@@ -1,0 +1,14 @@
+<app-cv-gen-button
+  class="add-employee-btn"
+  [buttonTypes]="buttonTypes.BlueButton"
+  (btnClick)="navigateToAddEmployee()"
+  >Add employee</app-cv-gen-button
+>
+
+<div class="table">
+  <app-cv-table
+    [tableColumns]="tableColumns"
+    [tableData]="employeeList$"
+    (onDelete)="deleteEmploee($event)"
+  ></app-cv-table>
+</div>

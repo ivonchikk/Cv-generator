@@ -1,0 +1,61 @@
+<form class="project-form" [formGroup]="cvProjectForm">
+  <app-cv-gen-input
+    formControlName="projectName"
+    class="info-field"
+    type="text"
+    placeholder="Project name"
+    label="Name"
+  ></app-cv-gen-input>
+
+  <cv-gen-datepicker
+    formControlName="startDate"
+    class="info-field"
+    label="Start date"
+    placeholder="Select date"
+  ></cv-gen-datepicker>
+
+  <cv-gen-datepicker
+    formControlName="endDate"
+    class="info-field"
+    label="End date"
+    placeholder="Select date"
+  ></cv-gen-datepicker>
+
+  <app-cv-gen-input
+    formControlName="teamSize"
+    class="info-field"
+    type="text"
+    placeholder="Team size"
+    label="Team Size"
+  ></app-cv-gen-input>
+
+  <app-cv-gen-input
+    formControlName="techStack"
+    class="info-field"
+    type="text"
+    placeholder="Tech stack"
+    label="Tech stack"
+  ></app-cv-gen-input>
+
+  <app-cv-gen-input
+    formControlName="roles"
+    class="info-field"
+    type="text"
+    placeholder="Roles"
+    label="Roles"
+  ></app-cv-gen-input>
+
+  <cv-gen-textarea
+    formControlName="description"
+    class="textarea"
+    placeholder="Description"
+    label="Description"
+  ></cv-gen-textarea>
+
+  <cv-gen-textarea
+    formControlName="responsibilities"
+    class="textarea"
+    placeholder="Responsibilities"
+    label="Responsibilities"
+  ></cv-gen-textarea>
+</form>

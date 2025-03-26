@@ -1,0 +1,17 @@
+<div class="project-form">
+  <cv-gen-project-form [cvProjectForm]="projectForm"></cv-gen-project-form>
+</div>
+<div class="project-btn-box">
+  <app-cv-gen-button
+    class="cancel-btn"
+    [buttonTypes]="buttonTypes.WhiteButton"
+    (btnClick)="cancelProject()"
+    >Cancel</app-cv-gen-button
+  >
+  <app-cv-gen-button
+    class="save-btn"
+    [buttonTypes]="buttonTypes.BlueButton"
+    (btnClick)="saveProject()"
+    >Save</app-cv-gen-button
+  >
+</div>

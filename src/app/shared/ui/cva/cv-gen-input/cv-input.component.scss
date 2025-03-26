@@ -1,0 +1,62 @@
+@import "utils";
+
+:host ::ng-deep .cv-input .mat-mdc-form-field-infix {
+  padding: 5px 12px;
+  min-height: 0;
+}
+:host ::ng-deep .mat-mdc-text-field-wrapper,
+:host ::ng-deep .mat-mdc-form-field-error-wrapper {
+  padding: 0;
+}
+
+
+.cv-input {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+
+  .mat-mdc-input-element {
+    font: $regular14;
+    ::placeholder {
+      color: #ff4d4f;
+    }
+  }
+
+  mat-label {
+    margin-bottom: 4px;
+    font: $regular12;
+    .star-span {
+      margin-left: 5px;
+      color: #ff4d4f;
+    }
+  }
+
+  .mat-mdc-form-field-bottom-align {
+    font: $regular12;
+    color: #ff4d4f;
+  }
+}
+
+
+
+
+
+// :host::ng-deep .mat-mdc-input-element ::placeholder {
+//   color:  #000000 !important;
+//   opacity: 25% !important;
+// }
+// :host::ng-deep .mdc-text-field__input::-moz-placeholder {
+//   opacity: 25%}
+// :host ::ng-deep .mat-mdc-form-field-error-wrapper {
+//   padding: 0;
+// }
+// :host ::ng-deep .mat-mdc-notch-piece {
+//    border: 3px solid blue;
+// }
+// :host ::ng-deep .mdc-notched-outline__trailing {
+//     border-left: none;
+
+// }
+// :host ::ng-deep .mdc-notched-outline__leading{
+//     border-right:none;
+// }

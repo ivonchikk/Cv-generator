@@ -1,0 +1,14 @@
+.project-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  .info-field {
+    margin: 20px 0;
+    flex-basis: 33%;
+  }
+  .textarea {
+    flex-basis: 40%;
+    margin-right: 10%;
+  }
+}

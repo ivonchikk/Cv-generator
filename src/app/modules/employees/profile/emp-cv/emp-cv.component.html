@@ -1,0 +1,95 @@
+<div class="employee-cv">
+  <div class="cv-list">
+    <div
+      *ngFor="let cvId of cvIdsByEmployee$ | async; let i=index; trackBy: trackByFn"
+      class="cvs"
+      [class.selected]="cvId === selectedCvId "
+      (click)="selectCv(cvId)"
+    >
+      <p>cv {{ i + 1 }}</p>
+      <button class="btn-delete-cv" (click)="deleteCv($event, cvId)"><img src="delete.png" alt="Delete" /></button>
+    </div>
+    <div *ngIf="!(cvIdsByEmployee$ | async )">
+      <p>Create a CV!</p>
+    </div>
+
+    <button mat-fab aria-label="Add CV" class="add-cv-btn" (click)="addCv()">
+      <mat-icon>add</mat-icon>
+    </button>
+  </div>
+
+  <div class="main-cv-content" *ngIf="selectedCvId">
+    <form [formGroup]="profileCv" class="cv-info-form">
+      <app-cv-gen-input
+        formControlName="lastName"
+        id="lastName"
+        class="info-field"
+        type="text"
+        placeholder="Last Name"
+        label="Last Name"
+      ></app-cv-gen-input>
+
+      <app-cv-gen-input
+        formControlName="email"
+        id="email"
+        class="info-field"
+        type="email"
+        placeholder="Ex. pat@example.com"
+        label="Email"
+      ></app-cv-gen-input>
+
+      <app-cv-gen-input
+        formControlName="skills"
+        id="skills"
+        class="info-field"
+        type="text"
+        placeholder="Skills"
+        label="Skills"
+      ></app-cv-gen-input>
+
+      <app-cv-gen-select
+        formControlName="specialization"
+        id="specialization"
+        class="info-field"
+        placeholder="Specialization"
+        label="Specialization"
+        [options]="specializationOptions"
+      ></app-cv-gen-select>
+
+      <app-cv-gen-select
+        formControlName="department"
+        id="department"
+        class="info-field"
+        placeholder="Department"
+        label="Department"
+        [options]="departmentOptions"
+      ></app-cv-gen-select>
+    </form>
+    
+
+    <div class="cv-project-form">
+      <app-cv-gen-button
+        class="add-project-btn"
+        [buttonTypes]="buttonTypes.BlueButton"
+        (btnClick)="addProject()"
+        >Add Project</app-cv-gen-button
+      >
+      <projects-accordion
+        [cvProjectForm]="projectForm"
+        [projectsIds]="projectsIdsByCv$ | async"
+        (onClick)="selectProject($event)"
+        (onDelete)="deleteProject($event)"
+      ></projects-accordion>
+    </div>
+
+    <div class="cv-btn-box">
+
+      <app-cv-gen-button
+        class="save-btn"
+        [buttonTypes]="buttonTypes.BlueButton"
+        (btnClick)="saveCv()"
+        >Save</app-cv-gen-button
+      >
+    </div>
+  </div>
+</div>

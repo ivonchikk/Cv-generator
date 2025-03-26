@@ -1,0 +1,21 @@
+<form class="cv-input">
+  <mat-label>
+    <span [textContent]="label"></span>
+    <img class="star-span" src="/star.png" alt="*" />
+  </mat-label>
+  <mat-form-field appearance="outline" class="example-full-width">
+    <input
+      matInput
+      [type]="type"
+      [formControl]="cvInputControl"
+      [placeholder]="placeholder"
+    />
+
+    <mat-error *ngIf="invalid && !cvInputControl.hasError('required')"
+      >Please, specify the correct pattern</mat-error
+    >
+    <mat-error *ngIf="cvInputControl.hasError('required')"
+      >Please, specify the field</mat-error
+    >
+  </mat-form-field>
+</form>

@@ -1,0 +1,43 @@
+<cdk-accordion class="accordion">
+  <cdk-accordion-item
+    *ngFor="let projectId of projectsIds; let index = index"
+    #accordionItem="cdkAccordionItem"
+    class="accordion-item"
+    role="button"
+    tabindex="0"
+    [attr.id]="'accordion-header-' + index"
+    [attr.aria-expanded]="accordionItem.expanded"
+    [attr.aria-controls]="'accordion-body-' + index"
+
+  >
+    <div class="accordion-item-header"
+     (click)="accordionItem.toggle()"
+     (click)="onClick.emit(projectId)"
+     >
+      <div class="main-header">
+        <span
+          class="accordion-item-description"
+          *ngIf="!accordionItem.expanded"
+        >
+          <img src="arrow-closed.png" />
+        </span>
+        <span class="accordion-item-description" *ngIf="accordionItem.expanded">
+          <img src="arrow-open.png" />
+        </span>
+        <p>{{ projectId }}</p>
+      </div>
+      <button class="delete-btn" (click)="deleteBtn($event, projectId)"><img src="delete2.png" alt="delete" /></button>
+    </div>
+    <div
+      class="accordion-item-body"
+      role="region"
+      [style.display]="accordionItem.expanded ? '' : 'none'"
+      [attr.id]="'accordion-body-' + index"
+      [attr.aria-labelledby]="'accordion-header-' + index"
+    >
+      <cv-gen-project-form
+        [cvProjectForm]="cvProjectForm"
+      ></cv-gen-project-form>
+    </div>
+  </cdk-accordion-item>
+</cdk-accordion>

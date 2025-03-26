@@ -1,0 +1,43 @@
+@import "utils" ;
+
+.header {
+  background-color: #001529;
+  color: #ffffff;
+  padding: 8px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  p {
+    margin: 0;
+    font:$bold18;
+  }
+
+  img {
+    margin-right: 12px;
+    width: 32px;
+    height: 32px;
+  }
+}
+
+.instrument_panel {
+  button {
+    border: none;
+    background: none;
+    padding: 7px;
+    margin-right: 5px;
+    cursor: pointer;
+
+    img {
+      opacity: 0.6;
+    }
+    :hover {
+      opacity: 1;
+    }
+  }
+}

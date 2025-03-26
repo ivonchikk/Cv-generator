@@ -1,0 +1,40 @@
+@import "utils";
+
+.cv-table {
+  .mat-elevation-z8 {
+    margin: 20px 10px;
+    box-shadow: none;
+    background-color: #fff;
+    font: $regular14;
+  }
+  .mat-mdc-header-row {
+    background-color: #fafafa;
+    border-bottom: 1px solid #efefef;
+  }
+  .mat-mdc-header-cell {
+    border-left: 1px solid #efefef;
+    font: $medium14;
+    &:first-child {
+      border-left: none;
+    }
+  }
+
+  .mat-mdc-row {
+    &:hover {
+      background-color: #fcfcfc;
+      cursor: pointer;
+    }
+  }
+
+  .mat-mdc-cell,
+  .mat-mdc-header-cell {
+    border-bottom: 0.125rem solid #efefef;
+  }
+}
+
+.delete-btn {
+  height: 32px;
+  mat-icon {
+    height: 20px;
+  }
+}

@@ -1,0 +1,25 @@
+@import "utils";
+
+.profile-nav {
+  width: 100%;
+  display: flex;
+  border-bottom: 1px solid #efefef;
+}
+
+a {
+  padding: 21px 15px;
+  text-decoration: none;
+  color: #000;
+  font: $regular14;
+
+  &:hover {
+    // font: $medium14;
+    color: #1890ff;
+  }
+}
+
+.active_link {
+  border-bottom: 0.125rem solid #1890ff;
+  color: #1890ff;
+  font: $medium14;
+}

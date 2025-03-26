@@ -1,0 +1,84 @@
+@import "utils";
+.selected {
+  border-bottom: 2px solid #1890ff !important;
+}
+
+.employee-cv {
+  display: flex;
+
+  .main-cv-content {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 30px 25px 30px;
+    width: 100%;
+
+    .cv-info-form {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .info-field {
+        flex-basis: 33%;
+        margin: 20px 0;
+      }
+    }
+
+    .cv-project-form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 20px;
+
+      .add-project-btn {
+        align-self: flex-end;
+        margin: 10px 0 10px 10px;
+      }
+    }
+
+    .cv-btn-box {
+      align-self: flex-end;
+      margin-top: 5%;
+      .cansel-btn {
+        margin-right: 15px;
+      }
+    }
+  }
+}
+
+.cv-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  height: 100%;
+  width: 20%;
+  .cvs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 11px 5px 20px;
+    border-bottom: 2px solid #efefef;
+    &:hover {
+      background-color: #f8f8f8;
+    }
+
+    button {
+      font: $regular14;
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
+      padding: 7px;
+      cursor: pointer;
+    }
+    p {
+      margin: 0;
+      font: $regular14;
+      cursor: default;
+    }
+  }
+
+  .add-cv-btn {
+    align-self: flex-end;
+    margin-top: 20%;
+    background-color: #fafafa;
+    border-radius: 2px;
+    height: 40px;
+    width: 46px;
+  }
+}

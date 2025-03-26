@@ -1,0 +1,126 @@
+{
+  "employees": [
+    {
+      "id": "1",
+      "firstName": "Vasya",
+      "lastName": "Pupkin",
+      "email": "v.pupkin@gmail.com",
+      "specialization": "Angular",
+      "department": "JavaScript",
+      "cvsId": [
+        "1",
+        "2",
+        "34f"
+      ]
+    },
+    {
+      "id": "2",
+      "firstName": "Pasha",
+      "lastName": "Vupkin",
+      "email": "p.pash@gmail.com",
+      "specialization": "Angular",
+      "department": "JavaScript",
+      "cvsId": [
+        "21"
+      ]
+    },
+    {
+      "id": "682c",
+      "firstName": "Ivan",
+      "lastName": "Ivanov",
+      "email": "Ivanov@gmail.com",
+      "specialization": "Angular",
+      "department": "JavaScript",
+      "cvsId": []
+    }
+  ],
+  "cvs": [
+    {
+      "id": "1",
+      "email": "v.pupkin@gmail.com",
+      "lastName": "Pupkin",
+      "department": "JavaScript",
+      "specialization": "Angular",
+      "skills": "Mobile Design",
+      "projectsIds": [
+        "1",
+        "2"
+      ]
+    },
+    {
+      "id": "2",
+      "email": "v.pupkin@gmail.com",
+      "lastName": "Pupkin",
+      "department": "JavaScript",
+      "specialization": "Angular",
+      "skills": "skills",
+      "projectsIds": []
+    },
+    {
+      "id": "34f",
+      "email": "v.pupkin@gmail.com",
+      "lastName": "Pupkin",
+      "department": "JavaScript",
+      "specialization": "React",
+      "skills": "Mobile",
+      "projectsIds": []
+    },
+    {
+      "id": "21",
+      "email": "p.pash@gmail.com",
+      "lastName": "Vupkin",
+      "department": "JavaScript",
+      "specialization": "Angular",
+      "skills": "Mobile Design",
+      "projectsIds": [
+        "2"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "projectName": "First project",
+      "startDate": 1359835200000,
+      "endDate": 1546300800000,
+      "teamSize": "4",
+      "techStack": "JS, Flutter, PHP",
+      "roles": "JS",
+      "description": "about project1",
+      "responsibilities": "Responsibilities1"
+    },
+    {
+      "id": "2",
+      "projectName": "Second project",
+      "startDate": 1388606400000,
+      "endDate": 1389643200000,
+      "teamSize": "5",
+      "techStack": "JS, Flutter, PHP",
+      "roles": "js",
+      "description": "about project2",
+      "responsibilities": "Responsibilities2"
+    },
+    {
+      "id": "3",
+      "projectName": "project3",
+      "startDate": 1544302800000,
+      "endDate": 1544734800000,
+      "teamSize": "9",
+      "techStack": "JS, Flutter, PHP",
+      "roles": "JS",
+      "description": "about project3",
+      "responsibilities": "Responsibilities"
+    },
+    {
+      "id": "4",
+      "projectName": "project4",
+      "startDate": 1544907600000,
+      "endDate": 1545685200000,
+      "teamSize": "4",
+      "techStack": "JS, Flutter, PHP",
+      "roles": "JS",
+      "description": "about project4",
+      "responsibilities": "Responsibilities4"
+    }
+  ]
+}

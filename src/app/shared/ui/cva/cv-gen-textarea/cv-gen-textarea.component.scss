@@ -1,0 +1,38 @@
+@import "utils";
+
+:host ::ng-deep .cv-textarea .mat-mdc-form-field-infix {
+    padding: 5px 12px;
+    // min-height: 0;
+  }
+  :host ::ng-deep .mat-mdc-text-field-wrapper,
+  :host ::ng-deep .mat-mdc-form-field-error-wrapper {
+    padding: 0;
+  }
+  
+  
+  .cv-textarea {
+    display: flex;
+    flex-direction: column;
+    // max-width: 400px;
+  
+    .mat-mdc-input-element {
+      font: $regular14;
+      ::placeholder {
+        color: #ff4d4f;
+      }
+    }
+  
+    mat-label {
+      margin-bottom: 4px;
+      font: $regular12;
+      .star-span {
+        margin-left: 5px;
+        color: #ff4d4f;
+      }
+    }
+  
+    .mat-mdc-form-field-bottom-align {
+      font: $regular12;
+      color: #ff4d4f;
+    }
+  }

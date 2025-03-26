@@ -1,0 +1,18 @@
+<form class="cv-gen-select-form">
+  <mat-label>
+    <span [textContent]="label"></span>
+    <img class="star-span" src="/star.png" alt="*" />
+  </mat-label>
+  <mat-form-field appearance="outline">
+    <mat-select
+      [placeholder]="placeholder"
+      [formControl]="selectControl"
+    >
+      <mat-option>--</mat-option>
+      <mat-option *ngFor="let option of options" [value]="option">{{ option }}</mat-option>
+
+    </mat-select>
+
+    <mat-error *ngIf="selectControl.hasError('required')">Please, specify the field</mat-error>
+  </mat-form-field>
+</form>

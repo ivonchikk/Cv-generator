@@ -1,0 +1,19 @@
+<form class="cv-textarea">
+  <mat-label>
+    <span [textContent]="label"></span>
+    <img class="star-span" src="/star.png" alt="*" />
+  </mat-label>
+  <mat-form-field class="example-full-width" appearance="outline">
+    <textarea
+      matInput
+      cdkTextareaAutosize
+      
+      cdkAutosizeMinRows = "5" 
+      cdkAutosizeMaxRows = "10"
+      [placeholder]="placeholder"
+      [formControl]="textareaControl"
+    ></textarea>
+
+    <mat-error *ngIf="textareaControl.hasError('required')">Please, specify the field</mat-error>
+  </mat-form-field>
+</form>

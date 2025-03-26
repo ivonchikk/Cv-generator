@@ -1,0 +1,5 @@
+<div class="profile-nav">
+    <a routerLink="info" routerLinkActive="active_link">Info</a>
+    <a *ngIf="!(idInPath === 'create')" routerLink="cv" routerLinkActive="active_link">CV</a>
+</div>
+<router-outlet></router-outlet>
